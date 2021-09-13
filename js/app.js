@@ -18,6 +18,10 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
+      <div class="d-flex justify-content-between">
+      <p>Rating: ${product.rating.rate}</p>
+      <p>Numbers: ${product.rating.count} </p>
+    </div>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
       `;

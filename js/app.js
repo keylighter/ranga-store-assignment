@@ -31,16 +31,16 @@ const addToCart = (id, price) => {
   updatePrice("price", price);
   // tax changing by changing count 
   updateTaxAndCharge();
-
-
+  //grand total addition
+  updateTotal()
   document.getElementById("total-Products").innerText = count;
 };
 
-// const getInputValue = (id) => {
-//   const element = document.getElementById(id).innerText;
-//   const converted = parseInt(element);
-//   return converted;
-// };
+const getInputValue = (id) => {
+  const element = document.getElementById(id).innerText;
+  const converted = parseInt(element);
+  return converted;
+};
 
 // main price update function
 const updatePrice = (id, value) => {
@@ -72,11 +72,11 @@ const updateTaxAndCharge = () => {
   }
 };
 
-const getInputValue = (id) => {
-  const element = document.getElementById(id).innerText;
-  const converted = parseInt(element);
-  return converted;
-};
+// const getInputValue = (id) => {
+//   const element = document.getElementById(id).innerText;
+//   const converted = parseInt(element);
+//   return converted;
+// };
 
 //grandTotal update function
 const updateTotal = () => {
